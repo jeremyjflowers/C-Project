@@ -4,8 +4,9 @@ class Game
 {
 public:
 	void run();
-	bool getGameOver(bool value) { m_gameOver = value; }
-
+	bool getGameOver() { return m_gameOver; }
+	void setGameOver(bool value) { m_gameOver = value; }
+	void battleMode();
 
 private:
 	void start();
