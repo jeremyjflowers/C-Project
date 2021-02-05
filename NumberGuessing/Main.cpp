@@ -19,6 +19,11 @@ void fizzBuzz(int num)
 	}
 }
 
+void NumberGuessing()
+{
+
+}
+
 int main()
 {
 	int num = 0;
