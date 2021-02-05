@@ -28,14 +28,14 @@ void NumberGuessing()
 	int num[51]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50};
 	int min = 1;
 	int max = 50;
-	int guess = (min + max) / 2;
-	guess = num[guess];
-	bool gameOver = false;
+	bool answer = false;
 
 
 	while (min <= max)
 	{
-		gameOver == false;
+		answer = false;
+		int guess = (min + max) / 2;
+
 		std::cout << "Is this your number: " << std::endl;
 		std::cout << guess << std::endl;
 		std::cout << "1: [Yes]" << std::endl;
@@ -47,8 +47,9 @@ void NumberGuessing()
 
 		if (input == 1)
 		{
-			gameOver == true;
-			return guess;
+			answer == true;
+			std::cout << "A successful simulation attempt!!" << std::endl;
+			return;
 		}
 
 		else if (input == 2)
@@ -71,15 +72,8 @@ void NumberGuessing()
 		}
 	}
 
-	if (gameOver == true)
+	if (answer == false)
 	{
-
-		std::cout << "A successful simulation attempt!!" << std::endl;
-	}
-
-	else if (gameOver == false)
-	{
-
 		std::cout << "Are you sure you're not cheating?";
 	}
 }
