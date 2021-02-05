@@ -7,9 +7,7 @@ int createCharacter()
 	Character* player = new Character();
 	player->setHealth(100);
 	player->setDamage(10);
-	player->setName('test');
 
-	//example text files
 
 	std::fstream file;
 
@@ -26,7 +24,6 @@ int createCharacter()
 	file.close();
 
 
-	std::cout << "Name: " << player->getName() << std::endl;
 	std::cout << "Health: " << player->getHealth() << std::endl;
 	std::cout << "Damage: " << player->getDamage() << std::endl;
 
@@ -38,7 +35,6 @@ int loadCharacter()
 	Character player = Character();
 	player.setHealth(100);
 	player.setDamage(10);
-	player.setName('test');
 
 
 
@@ -57,7 +53,7 @@ int loadCharacter()
 	file.close();
 
 
-	std::cout << "Name: " << player.getName() << std::endl;
+
 	std::cout << "Health: " << player.getHealth() << std::endl;
 	std::cout << "Damage: " << player.getDamage() << std::endl;
 
